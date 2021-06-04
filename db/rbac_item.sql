@@ -1,0 +1,15 @@
+INSERT INTO `rbac_item` (`id`, `name`, `code`, `class`, `client_type`, `item_type`, `pid`, `sorting`, `delete_time`) VALUES (1, '房产管理', '', 'layui-icon layui-icon-headset', 1, 1, 0, 0, NULL);
+INSERT INTO `rbac_item` (`id`, `name`, `code`, `class`, `client_type`, `item_type`, `pid`, `sorting`, `delete_time`) VALUES (2, '账户管理', '', 'layui-icon layui-icon-user', 1, 1, 0, 0, NULL);
+INSERT INTO `rbac_item` (`id`, `name`, `code`, `class`, `client_type`, `item_type`, `pid`, `sorting`, `delete_time`) VALUES (3, '用户管理', '', 'layui-icon layui-icon-set', 1, 1, 0, 0, NULL);
+INSERT INTO `rbac_item` (`id`, `name`, `code`, `class`, `client_type`, `item_type`, `pid`, `sorting`, `delete_time`) VALUES (205, '房产列表', '/house/index', '', 1, 1, 1, 0, NULL);
+INSERT INTO `rbac_item` (`id`, `name`, `code`, `class`, `client_type`, `item_type`, `pid`, `sorting`, `delete_time`) VALUES (206, '房产新增', '/house/add', '', 1, 2, 205, 0, NULL);
+INSERT INTO `rbac_item` (`id`, `name`, `code`, `class`, `client_type`, `item_type`, `pid`, `sorting`, `delete_time`) VALUES (207, '房产编辑', '/house/edit', '', 1, 2, 205, 0, NULL);
+INSERT INTO `rbac_item` (`id`, `name`, `code`, `class`, `client_type`, `item_type`, `pid`, `sorting`, `delete_time`) VALUES (208, '房产删除', '/house/delete', '', 1, 2, 205, 0, NULL);
+INSERT INTO `rbac_item` (`id`, `name`, `code`, `class`, `client_type`, `item_type`, `pid`, `sorting`, `delete_time`) VALUES (209, '账户列表', '/user/index', '', 1, 1, 2, 0, NULL);
+INSERT INTO `rbac_item` (`id`, `name`, `code`, `class`, `client_type`, `item_type`, `pid`, `sorting`, `delete_time`) VALUES (210, '账户新增', '/user/add', '', 1, 2, 209, 0, NULL);
+INSERT INTO `rbac_item` (`id`, `name`, `code`, `class`, `client_type`, `item_type`, `pid`, `sorting`, `delete_time`) VALUES (211, '账户编辑', '/user/edit', '', 1, 2, 209, 0, NULL);
+INSERT INTO `rbac_item` (`id`, `name`, `code`, `class`, `client_type`, `item_type`, `pid`, `sorting`, `delete_time`) VALUES (212, '账户删除', '/user/delete', '', 1, 2, 209, 0, NULL);
+INSERT INTO `rbac_item` (`id`, `name`, `code`, `class`, `client_type`, `item_type`, `pid`, `sorting`, `delete_time`) VALUES (213, '用户列表', '/users/index', '', 1, 1, 3, 0, NULL);
+INSERT INTO `rbac_item` (`id`, `name`, `code`, `class`, `client_type`, `item_type`, `pid`, `sorting`, `delete_time`) VALUES (214, '用户新增', '/users/add', '', 1, 2, 213, 0, NULL);
+INSERT INTO `rbac_item` (`id`, `name`, `code`, `class`, `client_type`, `item_type`, `pid`, `sorting`, `delete_time`) VALUES (215, '用户编辑', '/users/edit', '', 1, 2, 213, 0, NULL);
+INSERT INTO `rbac_item` (`id`, `name`, `code`, `class`, `client_type`, `item_type`, `pid`, `sorting`, `delete_time`) VALUES (216, '用户删除', '/users/delete', '', 1, 2, 213, 0, NULL);

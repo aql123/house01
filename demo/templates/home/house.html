@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <title>二手房推荐系统</title>
+    <meta content="" name="descriptison">
+    <meta content="" name="keywords">
+
+    <!-- Favicons -->
+  <link href="{% static 'home/img/favicon.png' %}" rel="icon">
+  <link href="{% static 'home/img/apple-touch-icon.png' %}" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,600,600i,700,700i,900" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="{% static 'home/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+  <link href="{% static 'home/vendor/icofont/icofont.min.css' %}" rel="stylesheet">
+  <link href="{% static 'home/vendor/boxicons/css/boxicons.min.css' %}" rel="stylesheet">
+  <link href="{% static 'home/vendor/animate.css/animate.min.css' %}" rel="stylesheet">
+  <link href="{% static 'home/vendor/venobox/venobox.css' %}" rel="stylesheet">
+  <link href="{% static 'home/vendor/aos/aos.css' %}" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="{% static 'home/css/style.css' %}" rel="stylesheet">
+    <style>
+
+        body {
+            height: 100%;
+            width:100%;
+        }
+        .bottom_nav{
+            text-align: center;
+            }
+<!--        .search-->
+<!--        {-->
+<!--            float:none;-->
+<!--            display:block;-->
+<!--            margin-left:auto;-->
+<!--            margin-right:auto;-->
+<!--            width: 100%;-->
+<!--            height: 100px;-->
+<!--            text-align: center;-->
+        }
+
+        .middle {
+
+           float: none;
+
+           display: inline-block;
+
+           vertical-align: middle;
+        }
+
+
+
+
+
+    </style>
+
+</head>
+
+<body>
+
+
+<!-- ======= Header ======= -->
+<header id="header">
+    <div class="container">
+
+        <div class="logo float-left">
+            <h1 class="text-light"><a href="temp.html"><span>二手房推荐系统</span></a></h1>
+            <!-- Uncomment below if you prefer to use an image logo -->
+            <!-- <a href="temp.html"><img src="static/home/img/logo.png" alt="" class="img-fluid"></a>-->
+        </div>
+
+        {% include 'home/nav.html' %}
+
+    </div>
+
+</header><!-- End Header -->
+
+<div class="container" >
+        <form class="form-inline" role="search" action="" method="post">
+            {% csrf_token %}
+            <div class="form-group form-group-lg pull-right" style="width: 320px;">
+                <input type="text" name="kw" class="form-control" placeholder="搜索小区名" style="width: 320px;">
+                <input type="text" name="table_name" value="56885_cangchu" style="display: none;">
+            </div>
+            <button type="submit" class="btn btn-info input-lg">搜索</button>
+        </form>
+
+</div>
+
+
+<!-- ======= Our Team Section ======= -->
+<section id="team" class="team">
+    <div class="container">
+
+        <div class="section-title">
+
+            <h2>房产列表</h2>
+        </div>
+        <!-- ======= Counts Section ======= -->
+        <section class="counts section-bg">
+            <div class="container">
+                <table class="table table-striped">
+
+                    <tr>
+                        <td>ID</td>
+                        <td>小区名称</td>
+                        <td>户型</td>
+                        <td>价格</td>
+                        <td>户型大小</td>
+                        <td>楼层</td>
+                        <td>是否有电梯</td>
+                        <td>是否有暖气</td>
+                        <td>城市</td>
+                    </tr>
+
+                    {% for house in houseList %}
+                    <tr>
+                        <td>{{house.id}}</td>
+                        <td>{{house.name }}</td>
+                        <td>{{house.types}}</td>
+                        <td>{{house.price}}</td>
+                        <td>{{house.area}}</td>
+                        <td>{{house.floor}}</td>
+                        <td>{{house.elevator}}</td>
+                        <td>{{house.fuel}}</td>
+                        <td>{{house.city}}</td>
+
+                    </tr>
+                    {% endfor %}
+                </table>
+
+
+            </div>
+
+            <!--      </div>-->
+        </section><!-- End Counts Section -->
+
+    </div>
+</section><!-- End Our Team Section -->
+
+
+<!-- ======= Footer ======= -->
+<footer id="footer">
+
+
+    <div class="container">
+        <div class="copyright">
+            &copy; Copyright <strong><span>二手房推荐系统</span></strong>. All Rights Reserved
+        </div>
+
+    </div>
+</footer><!-- End Footer -->
+
+<a href="#" class="back-to-top"><i class="icofont-simple-up"></i></a>
+
+ <!-- Vendor JS Files -->
+  <script src="{% static 'home/vendor/jquery/jquery.min.js' %}"></script>
+  <script src="{% static 'home/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+  <script src="{% static 'home/vendor/jquery.easing/jquery.easing.min.js' %}"></script>
+  <script src="{% static 'home/vendor/php-email-form/validate.js' %}"></script>
+  <script src="{% static 'home/vendor/jquery-sticky/jquery.sticky.js' %}"></script>
+  <script src="{% static 'home/vendor/venobox/venobox.min.js' %}"></script>
+  <script src="{% static 'home/vendor/waypoints/jquery.waypoints.min.js' %}"></script>
+  <script src="{% static 'home/vendor/counterup/counterup.min.js' %}"></script>
+  <script src="{% static 'home/vendor/isotope-layout/isotope.pkgd.min.js' %}"></script>
+  <script src="{% static 'home/vendor/aos/aos.js' %}"></script>
+
+  <!-- Template Main JS File -->
+  <script src="{% static 'home/js/main.js' %}"></script>
+
+</body>
+
+</html>

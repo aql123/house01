@@ -1,0 +1,56 @@
+{%extends 'base/base.html'%}
+{%block mainbody%}
+<div id="page-inner">
+    <div class="row">
+
+		</div><!--/.row-->
+    <div class="row">
+
+    </div>
+<div class="row">
+<div class="col-md-5">
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            各个城市平均价格
+        </div>
+        <div class="panel-body">
+            <div id="morris-line-chart"></div>
+        </div>
+    </div>
+    </div>
+
+    <div class="col-md-7">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                        房屋是否有燃气
+            </div>
+            <div class="panel-body">
+                <div id="morris-bar-chart"></div>
+            </div>
+        </div>
+    </div>
+</div>
+    <div class="row">
+        <div class="col-md-9 col-sm-12 col-xs-12">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                房屋户型
+            </div>
+            <div class="panel-body">
+                <div id="morris-area-chart"></div>
+            </div>
+            </div>
+        </div>
+        <div class="col-md-3 col-sm-12 col-xs-12">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    房屋是否有电梯
+                </div>
+                <div class="panel-body">
+                    <div id="morris-donut-chart"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{%endblock%}

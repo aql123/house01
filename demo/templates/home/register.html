@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>二手房推荐系统</title>
+  <meta content="" name="descriptison">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="{% static 'home/img/favicon.png' %}" rel="icon">
+  <link href="{% static 'home/img/apple-touch-icon.png' %}" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,600,600i,700,700i,900" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="{% static 'home/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+  <link href="{% static 'home/vendor/icofont/icofont.min.css' %}" rel="stylesheet">
+  <link href="{% static 'home/vendor/boxicons/css/boxicons.min.css' %}" rel="stylesheet">
+  <link href="{% static 'home/vendor/animate.css/animate.min.css' %}" rel="stylesheet">
+  <link href="{% static 'home/vendor/venobox/venobox.css' %}" rel="stylesheet">
+  <link href="{% static 'home/vendor/aos/aos.css' %}" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="{% static 'home/css/style.css' %}" rel="stylesheet">
+
+</head>
+
+
+<body>
+
+
+
+  <!-- ======= Header ======= -->
+  <header id="header">
+    <div class="container">
+
+      <div class="logo float-left">
+        <h1 class="text-light"><a href="temp.html"><span>二手房推荐系统</span></a></h1>
+        <!-- Uncomment below if you prefer to use an image logo -->
+        <!-- <a href="temp.html"><img src="static/home/img/logo.png" alt="" class="img-fluid"></a>-->
+      </div>
+
+      {% include 'home/nav.html' %}
+
+    </div>
+  </header><!-- End Header -->
+
+ <!-- ======= Our Team Section ======= -->
+    <section id="team" class="team">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>二手房推荐系统</h2>
+          <h2>注册</h2>
+        </div>
+      </div>
+    </section><!-- End Our Team Section -->
+
+  <main id="main">
+
+
+
+<div class="tlinks">Collect from <a href="http://www.cssmoban.com/"  title="网站模板">网站模板</a></div>
+
+    <!-- ======= Contact Us Section ======= -->
+    <section id="contact" class="contact">
+      <div class="container">
+
+        <div class="section-title">
+          <h3>已有账号？去<a href="/home/login/" style="color: red">登录</a></h3>
+        </div>
+
+        <div class="row">
+
+          <div class="col-lg-12" data-aos="fade-up" data-aos-delay="300">
+            <form action="/home/register/" method="post" role="form" class="php-email-form">
+               {% csrf_token %}
+              <div class="form-group">
+                <input type="text" class="form-control" name="username" id="username" placeholder="用户名" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
+                <div class="validate"></div>
+              </div>
+              <div class="form-group">
+                <input type="text" class="form-control" name="mobile" id="mobile" placeholder="手机号" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
+                <div class="validate"></div>
+              </div>
+              <div class="form-group">
+                <input type="password" class="form-control" name="password" id="password" placeholder="密码" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
+                <div class="validate"></div>
+              </div>
+                <div class="form-group">
+                <input type="password" class="form-control" name="password1" id="password1" placeholder="再次输入密码" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
+                <div class="validate"></div>
+              </div>
+<!--                <div class="form-group">-->
+<!--                <textarea class="form-control" name="label" rows="5" data-rule="required" data-msg="Please write something for us"-->
+<!--                          placeholder="由于您是新用户，我们在此诚挚地询问您喜欢的电影类型，以使我们更好的向您推荐电影：-->
+<!--如：剧情、动作、喜剧、科幻、悬疑、爱情、恐怖等-->
+<!--                            "></textarea>-->
+<!--                <div class="validate"></div>-->
+<!--              </div>-->
+                <div class="form-group">
+                <input type="text" class="form-control" name="city" id="city" placeholder="城市 如：北京、上海、广州、深圳..." data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
+                <div class="validate"></div>
+              </div>
+                <div class="form-row">
+                <div class="col-lg-6 form-group">
+                  <input type="number" name="price" class="form-control" id="price" placeholder="房产价格" data-msg="Please enter at least 4 chars" />
+                  <div class="validate"></div>
+                </div>
+                <div class="col-lg-6 form-group">
+                  <input type="number" min="0" max="50000" step="0.01"  class="form-control" name="area" id="end_date" placeholder="房产大小" data-msg="Please enter a valid email" />
+                  <div class="validate"></div>
+                </div>
+              </div>
+              <div class="text-center"><button type="submit">提交</button></div>
+            </form>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Contact Us Section -->
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+    <div class="footer-top">
+      <div class="container">
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="copyright">
+        &copy; Copyright <strong><span>二手房推荐系统</span></strong>. All Rights Reserved
+      </div>
+    
+    </div>
+  </footer><!-- End Footer -->
+
+  <a href="#" class="back-to-top"><i class="icofont-simple-up"></i></a>
+
+ <!-- Vendor JS Files -->
+  <script src="{% static 'home/vendor/jquery/jquery.min.js' %}"></script>
+  <script src="{% static 'home/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+  <script src="{% static 'home/vendor/jquery.easing/jquery.easing.min.js' %}"></script>
+  <script src="{% static 'home/vendor/php-email-form/validate.js' %}"></script>
+  <script src="{% static 'home/vendor/jquery-sticky/jquery.sticky.js' %}"></script>
+  <script src="{% static 'home/vendor/venobox/venobox.min.js' %}"></script>
+  <script src="{% static 'home/vendor/waypoints/jquery.waypoints.min.js' %}"></script>
+  <script src="{% static 'home/vendor/counterup/counterup.min.js' %}"></script>
+  <script src="{% static 'home/vendor/isotope-layout/isotope.pkgd.min.js' %}"></script>
+  <script src="{% static 'home/vendor/aos/aos.js' %}"></script>
+
+  <!-- Template Main JS File -->
+  <script src="{% static 'home/js/main.js' %}"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,130 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+{% load static %}
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>chinaz</title>
+    <!-- Bootstrap Styles-->
+    <link href="{% static 'assets/css/bootstrap.css' %}" rel="stylesheet" />
+    <!-- FontAwesome Styles-->
+    <link href="{% static 'assets/css/font-awesome.css' %}" rel="stylesheet" />
+    <!-- Morris Chart Styles-->
+    <link href="{% static 'assets/js/morris/morris-0.4.3.min.css' %}" rel="stylesheet" />
+    <!-- Custom Styles-->
+    <link href="{% static 'assets/css/custom-styles.css' %}" rel="stylesheet" />
+    <!-- Google Fonts-->
+    <link rel="stylesheet" href="{% static 'assets/js/Lightweight-Chart/cssCharts.css' %}">
+    <script type="text/javascript" src="{% static 'assets/js/echarts.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'assets/js/beijing.js' %}"></script>
+    <script type="text/javascript" src="{% static 'assets/js/shanghai.js' %}"></script>
+    <script type="text/javascript" src="{% static 'assets/js/guang3_dong1_guang3_zhou1.js' %}"></script>
+    <script type="text/javascript" src="{% static 'assets/js/guang3_dong1_shen1_zhen4.js' %}"></script>
+</head>
+
+<body>
+    <div id="wrapper">
+        <nav class="navbar navbar-default top-navbar" role="navigation">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".sidebar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="{%url 'index'%}"><strong>HOUSE</strong></a>
+
+		    </div>
+            {% if "user_id" in request.session %}
+            <div style="float:right;margin-top:15px;margin-right: 20px;">
+                 <a href="{%url 'logout' %}">退出登录</a>
+            </div>
+            {% endif %}
+        </nav>
+        <!--/. NAV TOP  -->
+        <nav class="navbar-default navbar-side" role="navigation">
+            <div class="sidebar-collapse">
+                <ul class="nav" id="main-menu">
+
+                    <li>
+                        <a class="active-menu" href="{%url 'index' %}"><i class="fa fa-dashboard"></i>首页</a>
+                    </li>
+                    <li>
+                        <a href="{%url 'bj'%}"><i class="fa fa-desktop"></i> 北京房源分布</a>
+                    </li>
+					<li>
+                        <a href="{%url 'sh'%}"><i class="fa fa-bar-chart-o"></i> 上海房源分布</a>
+                    </li>
+                    <li>
+                        <a href="{%url 'gz'%}"><i class="fa fa-qrcode"></i> 广州房源分布</a>
+                    </li>
+                    
+                    <li>
+                        <a href="{%url 'sz'%}"><i class="fa fa-table"></i> 深圳房源分布</a>
+                    </li>
+
+                    <li>
+                        <a href="{%url 'cityinfo' 'bj' %}"><i class="fa fa-table"></i> 北京房产列表</a>
+                    </li>
+                    <li>
+                        <a href="{%url 'cityinfo' 'sh' %}"><i class="fa fa-table"></i> 上海房产列表</a>
+                    </li>
+                    <li>
+                        <a href="{%url 'cityinfo' 'gz' %}"><i class="fa fa-table"></i> 广州房产列表</a>
+                    </li>
+                    <li>
+                        <a href="{%url 'cityinfo' 'sz' %}"><i class="fa fa-table"></i> 深圳房产列表</a>
+                    </li>
+                </ul>
+
+            </div>
+
+        </nav>
+        <!-- /. NAV SIDE  -->
+      
+		<div id="page-wrapper">
+		    <div class="header">
+                        <h1 class="page-header">
+                            二手房推荐系统后台
+                        </h1>
+						<ol class="breadcrumb">
+					  <li><a href="{%url 'index'%}">返回首页</a></li>
+
+					</ol>
+
+		    </div>
+            {%block mainbody %}
+            {%endblock%}
+            <!-- /. PAGE INNER  -->
+        </div>
+        <!-- /. PAGE WRAPPER  -->
+    </div>
+    <!-- /. WRAPPER  -->
+    <!-- JS Scripts-->
+    <!-- jQuery Js -->
+    <script src="{% static 'assets/js/jquery-1.10.2.js' %}"></script>
+    <!-- Bootstrap Js -->
+    <script src="{% static 'assets/js/bootstrap.min.js' %}"></script>
+	 
+    <!-- Metis Menu Js -->
+    <script src="{% static 'assets/js/jquery.metisMenu.js' %}"></script>
+    <!-- Morris Chart Js -->
+    <script src="{% static 'assets/js/morris/raphael-2.1.0.min.js' %}"></script>
+    <script src="{% static 'assets/js/morris/morris.js' %}"></script>
+	
+	
+	<script src="{% static 'assets/js/easypiechart.js' %}"></script>
+	<script src="{% static 'assets/js/easypiechart-data.js' %}"></script>
+	
+	 <script src="{% static 'assets/js/Lightweight-Chart/jquery.chart.js' %}"></script>
+	
+    <!-- Custom Js -->
+    <script src="{% static 'assets/js/custom-scripts.js' %}"></script>
+
+      <script>
+    
+      </script>
+
+</body>
+
+</html>
